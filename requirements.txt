@@ -1,6 +1,6 @@
-streamlit
-streamlit-webrtc
-opencv-python-headless
-mediapipe
+streamlit==1.37.0
+streamlit-webrtc==0.47.7
+opencv-python-headless==4.9.0.80
+mediapipe==0.10.14
 openpyxl
 numpy

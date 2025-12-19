@@ -27,8 +27,14 @@ if not os.path.exists(excel_file):
     wb.save(excel_file)
 
 # ---------------- FACE DETECTION ----------------
-mp_face = mp.solutions.face_detection
-face_detection = mp_face.FaceDetection(model_selection=0, min_detection_confidence=0.5)
+def get_face_detector():
+    mp_face = mp.solutions.face_detection
+    return mp_face.FaceDetection(
+        model_selection=0,
+        min_detection_confidence=0.5
+    )
+
+face_detection = get_face_detector()
 
 # ---------------- ATTENDANCE FUNCTION ----------------
 def mark_attendance(name):
